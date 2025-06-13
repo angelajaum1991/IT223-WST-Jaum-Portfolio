@@ -1,0 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background Animation */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  animation: bg-animation 10s infinite alternate;
+  transition: background-color 2s ease-in-out;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Animated background */
+@keyframes bg-animation {
+  0% {
+    background-color: #ffe3ec;
+  }
+  100% {
+    background-color: #e1fbe2;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
+/* Toggle for mobile (optional JS support) */
+.toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Resume Content Wrapper */
+.resume-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+.resume-wrapper section {
+  margin-bottom: 2rem;
+}
+
+.resume-wrapper h1 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.resume-wrapper h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+}
+
+.resume-wrapper p,
+.resume-wrapper ul {
+  font-size: 1rem;
+  color: #444;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Image Styling */
+#image1 img {
+  display: block;
+  margin: 1rem auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+ 
+  border: 3px solid #ddd;
+}

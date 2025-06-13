@@ -1,0 +1,143 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  animation: bg-animation 10s infinite alternate;
+  transition: background-color 2s ease-in-out;
+}
+
+/* Background Color Animation */
+@keyframes bg-animation {
+  0% {
+    background-color: pink;
+  }
+  100% {
+    background-color: lightgreen;
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.nav-links li a:hover {
+  background-color: #ff69b4;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Toggle Button */
+.toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.profile-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.profile-photo {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-details h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-details h2 {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: none;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .profile-section {
+    padding: 1rem;
+  }
+
+  .profile-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-details h2 {
+    font-size: 1rem;
+  }
+
+  .profile-photo {
+    width: 120px;
+  }
+}
